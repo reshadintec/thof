@@ -1,0 +1,16 @@
+root {
+  --primary: #e3cb99;
+  --secondary: #670404;
+  --text: #ffffff;
+  --accent: #bf963f;
+  --color1: #fbf5b8;
+
+  --color2: #aa771c;
+
+  --color3: #0b0b0b;
+
+  /* background gradient colors with linear gradient and angle: 180 */
+  --bgcolor: #170505;
+  --bgcolor2: #000;
+
+}
