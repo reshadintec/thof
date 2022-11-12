@@ -1,0 +1,11 @@
+.navbar{
+  display: flex;
+  background-color: black;
+  padding: 1em;
+}
+ 
+.navbar img{
+  max-width:200px;
+  height: auto;
+  padding-left: 2em;
+}
