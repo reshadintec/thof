@@ -1,11 +1,54 @@
 .navbar{
-  display: flex;
+  max-width: 100%;
+  height: 5.5em;
   background-color: black;
-  padding: 1em;
+  position:sticky;
+  top:0;
+  z-index: 99;
+}
+
+.navbarWrapper{
+  display: flex;
+  padding: 0.8em 5em;
+  align-items: center;
+  justify-content: space-between;
+  
 }
  
 .navbar img{
-  max-width:200px;
-  height: auto;
-  padding-left: 2em;
+  max-width: 200px;
+}
+
+.navbarWrapper{
+  
+}
+.rightContainer{
+  display: flex;
+  align-items: center;
+}
+.topBarIconContainer{
+  position: relative;
+  color:#e3cb99;
+  padding-right: 2em;
+}
+.topBarIconContainer svg{
+  font-size: 1.6rem;
+}
+
+.topIconBadge{
+  position: absolute;
+  top:-10px;
+  right:16px;
+  padding: 3px 9px;
+  background-color: #670404;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+.avatar{
+  width: 2.5rem;
+  height:2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
 }
