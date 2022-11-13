@@ -12,12 +12,12 @@
   -moz-box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
 }
 .sidebarWrapper{
-  padding:0.5em 2em;
+  padding:0.8em 2em;
   color: #e3cb99;
 }
 
 .sidebarMenu{
-  margin-bottom: 0.4em;
+  margin-bottom: 1em;
 }
 
 .sidebarTitle{
@@ -28,7 +28,7 @@
 
 .sidebarList{
   list-style: none;
-  padding: 0.2em;  
+  padding: 0.1em;  
 }
 
 .sidebarListItem{
