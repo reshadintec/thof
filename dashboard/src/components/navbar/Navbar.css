@@ -19,9 +19,6 @@
   max-width: 200px;
 }
 
-.navbarWrapper{
-  
-}
 .rightContainer{
   display: flex;
   align-items: center;
@@ -30,9 +27,11 @@
   position: relative;
   color:#e3cb99;
   padding-right: 2em;
+  
 }
 .topBarIconContainer svg{
   font-size: 1.6rem;
+  cursor: pointer;
 }
 
 .topIconBadge{

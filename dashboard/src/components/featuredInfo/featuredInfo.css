@@ -1,0 +1,56 @@
+.featured{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.featuredItem{
+  flex:1;
+  background: rgb(63,13,18);
+  background: radial-gradient(circle, rgba(63,13,18,1) 0%, rgba(23,5,5,1) 50%);
+  margin:2em;
+  border-radius:10px;
+  box-sizing: border-box;
+  box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  -webkit-box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  -moz-box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  padding: 2em;
+  color:#e3cb99;
+  cursor: pointer; 
+}
+
+.featuredTitle{
+  font-size: 1.5rem;
+}
+
+.featuredMoneyContainer{
+  margin:0.5em 0;
+  display: flex;
+  align-items: center;
+}
+
+.featuredMoney{
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.featuredMoneyRate{
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+}
+
+.featuredMoneyContainer svg{
+  font-size: 1.4rem;
+  margin-left: 0.2em;
+  color:rgb(65, 218, 65);
+}
+
+svg.negative{
+  color:rgb(255, 61, 61);
+}
+
+.featuredSub{
+  color: #cecba89a;
+  font-size: 0.9rem;
+}
