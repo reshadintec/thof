@@ -47,3 +47,21 @@
   background-color: #aa771c;
   color: #fffbd2;
 }
+
+
+@media screen and (min-width:1441px) {
+  .sidebarWrapper{
+    padding: 2em;
+  }
+  .sidebarMenu{
+  margin-bottom: 2em;
+}
+
+  .sidebarTitle{
+    padding:0.5em;
+  }
+
+  .sidebarList{
+    padding: 0.1em 0.6em;
+  }
+}
