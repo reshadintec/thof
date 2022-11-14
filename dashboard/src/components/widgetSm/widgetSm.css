@@ -43,12 +43,13 @@ div.widgetSmUser{
   background-color: #e3cb99;
   color:rgb(63,13,18);
   padding: 0.5em 0.9em;
+  border:none;
   border-radius: 10px;
   cursor: pointer;
 }
 .widgetSmButton svg{
   margin-right: 4px;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .widgetSmUsername{

@@ -9,7 +9,7 @@ export default function Chart({title, data, datakey, grid}) {
         <LineChart data={data}>
           <XAxis dataKey="name" stroke="#e3cb99" />
           <Line type="monotone" dataKey={datakey} stroke="#e3cb99"/>
-          <Tooltip className="tooltipContainer" stroke="red"/>
+          <Tooltip wrapperStyle={{ outline: '#170505'}} />
           {grid && <CartesianGrid  stroke="#cecba89a"/>}
         </LineChart>
       </ResponsiveContainer>
