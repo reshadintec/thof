@@ -1,0 +1,61 @@
+.widgetSm{
+  flex:1;
+  margin: 2em;
+  border-radius:10px;
+  box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  -webkit-box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  -moz-box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  padding: 2em 2em 1em;
+  background: rgb(63,13,18);
+  background: radial-gradient(circle, rgba(63,13,18,1) 0%, rgba(23,5,5,1) 50%);
+  color:#e3cb99;
+}
+
+.widgetSmTitle{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.widgetSmList{
+  list-style-type: none;
+  padding:0;
+}
+.widgetSmListItem{
+  display: flex;
+  margin: 1.5em 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.widgetSmImg{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+div.widgetSmUser{
+  display: flex;
+  flex-direction: column;
+}
+
+.widgetSmButton{
+  display: flex;
+  align-items: center;
+  background-color: #e3cb99;
+  color:rgb(63,13,18);
+  padding: 0.5em 0.9em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.widgetSmButton svg{
+  margin-right: 4px;
+  font-size: 20px;
+}
+
+.widgetSmUsername{
+  font-weight: 600;
+}
+
+.widgetSmUserTitle{
+  font-weight: 300;
+  color: #e3cc9975;
+}

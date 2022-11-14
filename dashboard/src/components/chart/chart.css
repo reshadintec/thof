@@ -15,3 +15,22 @@
   font-size: 1.5rem;
   font-weight: 600;
 }
+
+.responsiveContainer{
+  
+}
+
+.recharts-default-tooltip{
+  background-color: rgb(63,13,18) !important;
+  border:none !important;
+  box-shadow: -4px 4px 9px 1px rgba(133, 46, 46, 0.75);
+  -webkit-box-shadow: -4px 4px 9px 1px rgba(65, 20, 20, 0.75);
+  -moz-box-shadow: -4px 4px 9px 1px rgba(56, 24, 24, 0.75);
+}
+
+.recharts-default-tooltip:focus-visible {
+    outline: rgb(63,13,18) auto 1px !important;
+    border: solid 1px gray !important;
+}
+
+
