@@ -35,6 +35,7 @@
   color: darkgoldenrod;
   margin-right: 2em;
   margin-left:0.4em;
+  cursor: pointer;
 }
 
 .userListDelete{
