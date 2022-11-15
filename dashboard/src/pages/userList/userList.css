@@ -9,13 +9,14 @@
   box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
   -webkit-box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
   -moz-box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
-  padding: 2em;
+  padding: 3em;
   color:#e3cb99;
 }
 
 .userListUser{
   display: flex;
   align-items: center;
+
 }
 
 .userListUser img{
@@ -30,7 +31,34 @@
   padding: 5px 10px;
   border:none;
   border-radius: 10px;
-  background-color: rgb(111, 200, 255);
-  color:rgb(6, 6, 58);
-  margin-right: 1em;
+  background-color: rgb(255, 255, 173);
+  color: darkgoldenrod;
+  margin-right: 2em;
+  margin-left:0.4em;
+}
+
+.userListDelete{
+  color: lightcoral;
+}
+/* text colors */
+.css-t0edp9-MuiDataGrid-root , .css-rtrcn9-MuiTablePagination-root{
+  color:#e3cb99 !important;
+}
+/* checkbox style */
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root, .css-t0edp9-MuiDataGrid-root .MuiDataGrid-iconSeparator{
+  color:#fffac163 !important;
+  
+}
+ 
+.css-17jjc08-MuiDataGrid-footerContainer{
+  border-top:none !important;
+}
+
+.css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root{
+  color:white !important; 
+}
+
+/* on focus colors */
+.css-t0edp9-MuiDataGrid-root .MuiDataGrid-cell:focus , .MuiDataGrid-columnHeaderTitleContainer:focus-visible{
+    outline: solid #e3cb99 1px !important;
 }
