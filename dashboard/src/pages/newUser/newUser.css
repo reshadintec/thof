@@ -1,3 +1,57 @@
 .newUser{
   flex:4;
+  border-radius:10px;
+  box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  -webkit-box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  -moz-box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  padding: 2em;
+  background: rgb(63,13,18);
+  background: radial-gradient(circle, rgba(63,13,18,1) 0%, rgba(23,5,5,1) 50%);
+  color:#e3cb99;
+  margin:2em;
+}
+
+.newUser h2{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color:#e0ba69;
+}
+
+.newUserForm{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.newUserItem{
+  width:400px;
+  display: flex;
+  flex-direction: column;
+  margin: 1em 2em 0 0;
+}
+
+.newUserItem label{
+  margin-bottom: 0.4em;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.newUserItem input{
+  height: 20px;
+  padding:10px;
+  border:none;
+  border-bottom: 1px solid #e3cc9975;
+  background-color: transparent;
+  color: #fffbc4; 
+}
+
+.newUserGender {
+  display: flex;
+  align-items: center;
+}
+.newUserGender input{
+  margin-right: 0.5em;
+}
+.newUserGender label{
+  margin-right:1em;
+  margin-top: 5px;
 }
