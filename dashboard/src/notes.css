@@ -4,7 +4,7 @@ root {
   --text: #ffffff;
   --accent: #bf963f;
   --color1: #fffbd2;
-
+  --fw300color: #e3cc9975;
   --color2: #aa771c;
 
   --color3: #0b0b0b;
@@ -13,4 +13,13 @@ root {
   --bgcolor: #170505;
   --bgcolor2: #000;
 
+  border-radius:10px;
+  box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  -webkit-box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  -moz-box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  padding: 2em;
+  background: rgb(63,13,18);
+  background: radial-gradient(circle, rgba(63,13,18,1) 0%, rgba(23,5,5,1) 50%);
+  color:#e3cb99;
 }
+
