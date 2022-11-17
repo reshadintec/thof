@@ -20,13 +20,14 @@
 .newUserForm{
   display: flex;
   flex-wrap: wrap;
+  padding: 2em 2em;
 }
 
 .newUserItem{
-  width:400px;
+  width: 400px;
   display: flex;
   flex-direction: column;
-  margin: 1em 2em 0 0;
+  margin: 0.8em 2em;
 }
 
 .newUserItem label{
@@ -44,6 +45,11 @@
   color: #fffbc4; 
 }
 
+.newUserItem input:focus-visible,
+.newUserItem select:focus-visible {
+  outline:none;
+}
+
 .newUserGender {
   display: flex;
   align-items: center;
@@ -54,4 +60,29 @@
 .newUserGender label{
   margin-right:1em;
   margin-top: 5px;
+}
+
+.newUserItem select{
+   background-color: transparent;
+   height: 40px;
+   padding:10px;
+   color:#e3cb99;
+   border-color: #e3cc9975 ;
+}
+
+.newUserForm button{
+  width: 160px;
+  margin: 3em 2em 0;
+  padding: 10px;
+  border:none;
+  border-radius: 5px;
+  background-color: #e3cb99;
+  color: #170505;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.newUserForm button:hover{
+  background-color: #e0ba69;
 }

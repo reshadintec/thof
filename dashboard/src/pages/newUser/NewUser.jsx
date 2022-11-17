@@ -16,7 +16,7 @@ export default function NewUser() {
         </div>
 
         <div className="newUserItem">
-          <label>Emial</label>
+          <label>Email</label>
           <input type="email" placeholder="johdoe@email.com"/>
         </div>
 
@@ -54,7 +54,7 @@ export default function NewUser() {
             <option value="Away">Away</option>
           </select>
         </div>
-
+        <button>Create User</button>
       </form>
     </div>
   )

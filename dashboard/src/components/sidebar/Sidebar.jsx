@@ -1,5 +1,7 @@
 import "./sidebar.css"
 import {AssessmentOutlined, CasesOutlined, EmailOutlined, HomeOutlined, InsightsOutlined, LoyaltyOutlined, MessageOutlined, PaidOutlined, PeopleOutline, QuizOutlined, ReportOutlined, StorefrontOutlined} from '@mui/icons-material';
+import {Link} from 'react-router-dom';
+
 export default function Sidebar() {
   return (
     <div className="sidebar">
@@ -7,10 +9,12 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle ">Dashboard</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem active">
-              <HomeOutlined/>
-              Home
-            </li>
+            <Link to="/" className="link">
+              <li className="sidebarListItem active">
+                <HomeOutlined/>
+                Home
+              </li>
+            </Link>
           </ul>
           <ul className="sidebarList">
             <li className="sidebarListItem">
@@ -28,16 +32,20 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Quick Access</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <PeopleOutline/>
-              Users
-            </li>
+            <Link to="/users" className="link">
+              <li className="sidebarListItem">
+                <PeopleOutline/>
+                Users
+              </li>
+            </Link>
           </ul>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <StorefrontOutlined/>
-              Products
-            </li>
+            <Link to="/products" className="link">
+              <li className="sidebarListItem">
+                <StorefrontOutlined/>
+                Products
+              </li>
+            </Link>
           </ul>
           <ul className="sidebarList">
             <li className="sidebarListItem">
