@@ -12,3 +12,36 @@
   color:#e3cb99;
 }
 
+.productList{
+  display: flex;
+  align-items: center;
+}
+
+.productList img{
+  width:40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1em;
+}
+
+.productListButton{
+  background-color: #e3cb99;
+  color: rgb(63,13,18);
+  padding: 0.2em 0.9em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.82rem;
+  margin-right: 2em;
+  margin-left: 0.5em;
+}
+.productListDelete{
+  color:lightcoral;
+  cursor: pointer;
+}
+
+.MuiDataGrid-row{
+  border-color: blueviolet !important;
+}

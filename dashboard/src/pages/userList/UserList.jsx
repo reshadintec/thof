@@ -13,7 +13,7 @@ export default function UserList() {
   }
 
   const columns = [
-  { field: 'id', headerName: 'ID', width: 60 },
+  { field: 'id', headerName: 'ID', width: 60},
   { field: 'user', headerName: 'User name ', width: 200, renderCell:(params)=>{
     return (
       <div className='userListUser'>

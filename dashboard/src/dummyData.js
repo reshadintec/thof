@@ -122,3 +122,27 @@ export const userRows = [
     transaction: "$140"
   },
 ];
+
+export const productRows = [
+  {
+    id: 1, 
+    productname: 'Imperial Emerald',
+    image: 'https://uz.thehouseoffragrance.com/wp-content/uploads/sites/2/2022/10/Imperial-Emerald-The-Merchant-of-Venice-1-600x600.webp',
+    brand: "The Merchant of Venice",
+    strength: "Eau De Parfum",
+    price: "$280",
+    gender: "Women",
+    size: "100 ml"
+  },
+  {
+    id: 2,
+    productname: 'Le Mat',
+    image: 'https://uz.thehouseoffragrance.com/wp-content/uploads/sites/2/2022/10/Le-Mat-Mendittorosa-1.webp',
+    brand: "Mendittorosa",
+    strength: "Extrait De Parfum",
+    price: "$250",
+    gender: "Unisex",
+    size: "100 ml"
+  },
+
+];
