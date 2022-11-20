@@ -156,23 +156,23 @@ export const productRows = [
   },
   {
     id: 4,
-    productname: 'Imperial Emerald',
-    image: 'https://uz.thehouseoffragrance.com/wp-content/uploads/sites/2/2022/10/Imperial-Emerald-The-Merchant-of-Venice-1-600x600.webp',
-    brand: "The Merchant of Venice",
+    productname: 'Electimuss Imperium',
+    image: 'https://uz.thehouseoffragrance.com/wp-content/uploads/sites/2/2022/10/electimuss-imperium.webp',
+    brand: "Electimuss",
     strength: "Eau De Parfum",
-    price: "$280",
-    gender: "Women",
+    price: "$183",
+    gender: "Unisex",
     size: "100 ml"
   },
   {
     id: 5,
-    productname: 'Le Mat',
-    image: 'https://uz.thehouseoffragrance.com/wp-content/uploads/sites/2/2022/10/Le-Mat-Mendittorosa-1.webp',
-    brand: "Mendittorosa",
-    strength: "Extrait De Parfum",
-    price: "$250",
-    gender: "Unisex",
-    size: "100 ml"
+    productname: '1725',
+    image: 'https://uz.thehouseoffragrance.com/wp-content/uploads/sites/2/2022/10/Histoires-de-Parfums-1725-1.webp',
+    brand: "Histoires De Parfums",
+    strength: "Eau De Parfum",
+    price: "$165",
+    gender: "Men",
+    size: "120 ml"
   },
   {
     id: 6,
