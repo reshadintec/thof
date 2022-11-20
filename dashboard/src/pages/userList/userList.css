@@ -20,22 +20,27 @@
 }
 
 .userListUser img{
-  width: 32px;
+  width:32px;
   height: 32px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 0.5em;
+  margin-right: 1em;
 }
 
 .userListEdit{
-  padding: 5px 10px;
-  border:none;
-  border-radius: 10px;
-  background-color: rgb(255, 255, 173);
-  color: darkgoldenrod;
-  margin-right: 2em;
-  margin-left:0.4em;
+  background-color: #e3cb99;
+  color: rgb(63,13,18);
+  padding: 0.2em 0.9em;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  font-weight: 500;
+  font-size: 0.82rem;
+  margin-right: 3em;
+  margin-left: 1em;
+}
+.userListEdit:hover{
+  background-color: #e0ba69;
 }
 
 .userListDelete{

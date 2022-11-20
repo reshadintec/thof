@@ -37,6 +37,10 @@
   margin-right: 2em;
   margin-left: 0.5em;
 }
+
+.productListButton:hover{
+  background-color: #e0ba69;
+}
 .productListDelete{
   color:lightcoral;
   cursor: pointer;
