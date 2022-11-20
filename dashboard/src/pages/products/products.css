@@ -41,7 +41,13 @@
   color:lightcoral;
   cursor: pointer;
 }
+.css-t0edp9-MuiDataGrid-root {
+  padding: 0 1em;
+}
+.css-f3jnds-MuiDataGrid-columnHeaders{
+  border-bottom-color: #e3cb99 !important;
+}
 
-.MuiDataGrid-row{
-  border-color: blueviolet !important;
+.css-t0edp9-MuiDataGrid-root .MuiDataGrid-cell{
+  border-bottom-color: #e3cb99 !important;
 }

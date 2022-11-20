@@ -43,7 +43,7 @@ export default function Products() {
     <div className="products">
       <div style={{ height: 550, width: '100%' }}>
         <DataGrid  sx={{ color: '#fff', border:'solid 1px #e3cb99 '}} className="dataGridCustom"
-          rows={data} disableSelectionOnClick
+          rows={data} disableSelectionOnClick 
           columns={columns}
           pageSize={8}
           rowsPerPageOptions={[8]}
