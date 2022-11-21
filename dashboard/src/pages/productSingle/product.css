@@ -1,3 +1,26 @@
 .product{
   flex:4;
+  margin:2em;
+}
+
+.titleContainer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleContainer h2{
+  color: #aa771c;
+  font-size: 1.8rem;
+}
+
+.titleContainer button{
+  width: 160px;
+    background-color: #aa771c;
+    color: #fffbd2;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
 }
