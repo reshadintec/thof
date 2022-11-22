@@ -112,4 +112,40 @@ div .productDesc span{
     color: #e0ba69;
 }
 
+form.productEdit{
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
+}
+
+div.productEditItem{
+  display: flex;
+  flex-direction: column;
+}
+
+div.productEditItem label{
+  margin-top: 0.5em;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+div.productEditItem input{
+  width: 250px;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #e3cc9975;
+  background-color: transparent;
+  color: #fffbc4;
+}
+
+.productEditItem input::placeholder{
+  color: #e3cc994a;
+}
+
+.productEditItem input:focus-visible{
+  border:none;
+  outline: none;
+  color: #fffbc4;
+  border-bottom: 1px solid #e3cc9975;
+}
 

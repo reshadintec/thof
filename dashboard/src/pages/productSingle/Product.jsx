@@ -54,7 +54,17 @@ export default function Product() {
         {/* Right Section */}
         <div className="rightBody">
           <span className="editTitle">Edit</span>
-          <form className="productEdit"></form>
+          <form className="productEdit">
+            <div className="productEditLeft">
+              <div className="productEditItem">
+                <label>Product Name</label>
+                <input type="text" placeholder="No 1"/>
+              </div>
+            </div>
+            <div className="productEditRight">
+              Right
+            </div>
+          </form>
         </div>
       </div>
     </div>
