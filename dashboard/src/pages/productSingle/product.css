@@ -1,6 +1,6 @@
-.product{
-  flex:4;
-  margin:2em;
+div .product {
+  flex: 4;
+  margin: 2em;
 }
 
 .titleContainer{
@@ -15,12 +15,101 @@
 
 .titleContainer button{
   width: 160px;
-    background-color: #aa771c;
-    color: #fffbd2;
-    border: none;
-    border-radius: 5px;
-    padding: 0.5em;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
+  background-color: #aa771c;
+  color: #fffbd2;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
 }
+
+div .bodyContainer{
+  margin: 2em 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+div .leftBody{
+  flex: 1;
+  border-radius:10px;
+  box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  -webkit-box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  -moz-box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  background: rgb(63,13,18);
+  background: radial-gradient(circle, rgba(63,13,18,1) 0%, rgba(23,5,5,1) 50%);
+  color:#e3cb99;
+  padding:2em;
+  margin-right: 2em;
+}
+
+div .rightBody{
+  flex: 2;
+  border-radius:10px;
+  box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  -webkit-box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  -moz-box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
+  background: rgb(63,13,18);
+  background: radial-gradient(circle, rgba(63,13,18,1) 0%, rgba(23,5,5,1) 50%);
+  color:#e3cb99;
+  padding:2em;
+}
+
+div .productTitle{
+  display: flex;
+  align-items: center;
+}
+
+div .productTitle img{
+  width:80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid #bf963f;
+  margin-right: 2em;
+}
+
+div .productTitleText{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+div .productTitleText span{
+  color: #e3cc99bb;
+  font-size: 0.9rem;
+  margin-top: 0.5em;
+}
+
+div .productAddInfo{
+  display: flex;
+  margin: 1.35em 1em;
+}
+div .productAddInfo h4{
+  width:100px;
+}
+
+div .productAddInfo span {
+  color: #e3cc99bb;
+  text-align: left;
+}
+
+div .productDesc{
+  display: flex;
+  flex-direction: column;
+  margin: 0 1em;
+}
+
+div .productDesc span{
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  color: #e3cc99bb;
+  text-align: justify;
+}
+/* Right Body styles */
+.editTitle{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e0ba69;
+}
+
+

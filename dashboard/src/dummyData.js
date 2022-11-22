@@ -245,3 +245,22 @@ export const productRows = [
     size: "120 ml"
   },
 ];
+
+export const productData = [
+  {
+    name: "Agu",
+    "Sales": 3000,
+  },
+  {
+    name: "Sep",
+    "Sales": 4000,
+  },
+  {
+    name: "Oct",
+    "Sales": 1000,
+  },
+  {
+    name: "Nov",
+    "Sales": 2400,
+  },
+];
