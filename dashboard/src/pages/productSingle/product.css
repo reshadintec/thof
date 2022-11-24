@@ -26,7 +26,7 @@ div .product {
 }
 
 div .bodyContainer{
-  margin: 2em 0;
+  margin: 1em 0;
   display: flex;
   justify-content: space-between;
 }
@@ -45,7 +45,7 @@ div .leftBody{
 }
 
 div .rightBody{
-  flex: 2;
+  flex: 2.5;
   border-radius:10px;
   box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
   -webkit-box-shadow: -4px 4px 9px 1px rgba(122,122,122,0.75);
@@ -59,11 +59,12 @@ div .rightBody{
 div .productTitle{
   display: flex;
   align-items: center;
+  margin-bottom: 2em;
 }
 
 div .productTitle img{
-  width:80px;
-  height: 80px;
+  width:100px;
+  height: 100px;
   border-radius: 50%;
   border: 1px solid #bf963f;
   margin-right: 2em;
@@ -96,14 +97,16 @@ div .productAddInfo span {
 div .productDesc{
   display: flex;
   flex-direction: column;
-  margin: 0 1em;
+  margin: 2em 0.8em;
+  
 }
 
 div .productDesc span{
   margin-top: 0.5em;
   font-size: 0.9em;
   color: #e3cc99bb;
-  text-align: justify;
+  text-align: left;
+  line-height: 1.5;
 }
 /* Right Body styles */
 .editTitle{
@@ -118,12 +121,12 @@ form.productEdit{
   margin: 1em 0;
 }
 
-div.productEditItem{
+div.productEditItem, div.productEditSelect{
   display: flex;
   flex-direction: column;
 }
 
-div.productEditItem label{
+div.productEditItem label , div.productEditSelect label{
   margin-top: 0.5em;
   font-size: 1rem;
   font-weight: 400;
@@ -131,11 +134,12 @@ div.productEditItem label{
 
 div.productEditItem input{
   width: 250px;
-  height: 40px;
+  height: 35px;
   border: none;
   border-bottom: 1px solid #e3cc9975;
   background-color: transparent;
   color: #fffbc4;
+  margin-bottom: 1em;
 }
 
 .productEditItem input::placeholder{
@@ -148,4 +152,50 @@ div.productEditItem input{
   color: #fffbc4;
   border-bottom: 1px solid #e3cc9975;
 }
+.newProductGender{
+  display: flex;
+  margin-top: 0.9em;
+}
+.newProductGender input{
+  width: 15px !important;
+  
+}
+.newProductGender input{
+  margin-right: 0.5em;
+}
+.newProductGender input:checked{
+  accent-color: black;
+  
+}
+
+.newProductGender label{
+  margin-right: 1em;
+}
+
+
+div.productEditImage img{
+  width:40px;
+  height: 40px;
+  border: 1px solid #e0ba69;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+div.productEditImage label{
+  cursor: pointer;
+}
+
+div.productEditSelect select{
+  margin-top: 0.5em;
+  background-color: transparent;
+   height: 40px;
+   padding:10px;
+   color:#e3cb99;
+   border-color: #e3cc9975 ;
+}
+
+div.productEditSelect select:focus-visible{
+  outline:none;
+}
+
 
