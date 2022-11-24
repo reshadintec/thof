@@ -8,7 +8,7 @@ div.productItem{
   display: flex;
   flex-direction: column;
   width: 45%;
-  margin: 0.8em 0;
+  margin: 0.5em 0;
 }
 
 div.productItem label{

@@ -1,7 +1,8 @@
+import ProductForm from "../../components/productForm/ProductForm"
 import "./productNew.css"
 
 export default function ProductNew() {
   return (
-    <div className="productNew">productNew</div>
+    <div className="productNew"><ProductForm/></div>
   )
 }
