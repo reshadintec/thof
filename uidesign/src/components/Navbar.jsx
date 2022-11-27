@@ -1,10 +1,13 @@
 import React from 'react'
 import styled from 'styled-components';
-import {SearchOutlined} from '@mui/icons-material';
+import Badge from '@mui/material/Badge';
+import {SearchOutlined, ShoppingCartOutlined} from '@mui/icons-material';
+import LogoSrc from '..//assets/GoldGradientmedium.png'
 const Container = styled.div`
-  height: 60px;
+  height: 80px;
   background-color: #0b0b0b;
   color: #e3cb99;
+  padding: 5px 0;
 `;
 
 const Wrapper = styled.div`
@@ -46,12 +49,17 @@ const Center = styled.div`
   flex:1;
   text-align: center;
 `;
-const Logo = styled.h1`
-  font-weight: bold; 
+const Logo = styled.img`
+  width: 200px;
 `
 const Right = styled.div`
   flex:1;  
 `;
+
+const MenuItem = styled.div`
+  font-size: 14px;
+  cursor: pointer;
+`
 const Navbar = () => {
   return (
     <Container>
@@ -63,8 +71,16 @@ const Navbar = () => {
             <SearchOutlined/>
           </SearchContainer>
         </Left>
-        <Center><Logo>House of Fragrance</Logo></Center>
-        <Right>Right</Right>
+        <Center><Logo src={LogoSrc}/></Center>
+        <Right>
+          <MenuItem>Register</MenuItem>
+          <MenuItem>Register</MenuItem>
+          <MenuItem>
+            <Badge badgeContent={4} >
+            <ShoppingCartOutlined/>
+    </Badge>
+          </MenuItem>
+        </Right>
       </Wrapper>
     </Container>
   )
