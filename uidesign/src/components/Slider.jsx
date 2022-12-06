@@ -12,7 +12,7 @@ const Arrow = styled.div`
   width: 50px;
   height: 50px;
   background: #e3cb99;
-  color: #170505;
+  color: #670404;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -50,10 +50,42 @@ const Image = styled.img`
 const InfoContainer = styled.div`
   position: absolute;
   max-width: 50vw;
-  top: 50%;
-  left:10%;
+  top: 20%;
+  left:12%;
   color:white;
-`
+`;
+
+const Title = styled.h2`
+  font-size: 48px;
+  color: white;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+`;
+
+const Line = styled.hr`
+  width:25%;
+  margin: 30px 0;
+  border-color: #e3cb99;
+`;
+
+const Paragraph = styled.p`
+  max-width: 80%;
+  line-height: 1.8;
+  font-size: 18px;
+`;
+
+const Button = styled.button`
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    color: #FFFFFF;
+    background-color: #bf963f;
+    border-radius: 10px;
+    border: none;
+    padding: 22px 36px 22px 36px;
+    margin: 40px 0;
+`;
 export const Slider = () => {
   return (
     <Container>
@@ -66,9 +98,14 @@ export const Slider = () => {
             <Image src="https://tm.thehouseoffragrance.com/wp-content/uploads/sites/17/2022/10/Clive_Christian_Slider.webp"/>
           </ImageContainer>
           <InfoContainer>
-            <h2>Title of Cotainer</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos velit fugit maxime nostrum obcaecati commodi unde facere in? Cupiditate, magni.</p>
-            <button>Click here</button>
+            <Title>
+              Welcome to the<br/> house of fragrance
+            </Title>
+            <Line/>
+            <Paragraph>
+              Where you can find great choices on our large selection of branded perfumes and cosmetics.
+            </Paragraph>
+            <Button>Learn More</Button>
           </InfoContainer>
         </Slide>
       </Wrapper>
