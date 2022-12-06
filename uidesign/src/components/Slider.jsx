@@ -3,15 +3,16 @@ import styled from "styled-components"
 
 const Container = styled.div`
   width: 100%;
-  height: calc(100vh - 200px);
+  height: calc(100vh - 120px);
   display: flex;
   position: relative;
 `;
 
-const Arrow= styled.div`
+const Arrow = styled.div`
   width: 50px;
   height: 50px;
-  background: #e3cc9975;
+  background: #e3cb99;
+  color: #170505;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -23,7 +24,7 @@ const Arrow= styled.div`
   right: ${props=>props.direction === "right" && "10px"};
   margin:auto;
   cursor: pointer;
-  opacity: 0.8;
+  z-index: 10;
 `;
 
 const Wrapper = styled.div`
@@ -31,20 +32,27 @@ const Wrapper = styled.div`
 `;
 
 const Slide = styled.div`
-  display: flex;
+  position:relative;
+  width: 100vw;
   align-items: center;
+
 `;
 
 const ImageContainer = styled.div`
-  flex:1;
+  
 `;
 
 const Image = styled.img`
-  object-fit: contain;
-  position: center center;
+  width: 100%;
+  height: calc(100vh - 120px);
+  object-fit: cover;
 `;
 const InfoContainer = styled.div`
-  flex:1;
+  position: absolute;
+  max-width: 50vw;
+  top: 50%;
+  left:10%;
+  color:white;
 `
 export const Slider = () => {
   return (
@@ -57,7 +65,11 @@ export const Slider = () => {
           <ImageContainer>
             <Image src="https://tm.thehouseoffragrance.com/wp-content/uploads/sites/17/2022/10/Clive_Christian_Slider.webp"/>
           </ImageContainer>
-          <InfoContainer></InfoContainer>
+          <InfoContainer>
+            <h2>Title of Cotainer</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos velit fugit maxime nostrum obcaecati commodi unde facere in? Cupiditate, magni.</p>
+            <button>Click here</button>
+          </InfoContainer>
         </Slide>
       </Wrapper>
       <Arrow direction="right">
