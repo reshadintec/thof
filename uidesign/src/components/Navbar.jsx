@@ -54,11 +54,15 @@ const Logo = styled.img`
 `
 const Right = styled.div`
   flex:1;  
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 `;
 
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
+  margin-left: 20px;
 `
 const Navbar = () => {
   return (
@@ -67,8 +71,8 @@ const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input></Input>
-            <SearchOutlined/>
+            <Input/>
+            <SearchOutlined style={{fontSize:"16px"}}/>
           </SearchContainer>
         </Left>
         <Center><Logo src={LogoSrc}/></Center>
@@ -76,7 +80,13 @@ const Navbar = () => {
           <MenuItem>Register</MenuItem>
           <MenuItem>Register</MenuItem>
           <MenuItem>
-            <Badge badgeContent={4} >
+            <Badge badgeContent={2}
+            sx={{
+            "& .MuiBadge-badge": {
+              color: "#670404",
+              backgroundColor: "#e3cb99"
+            }
+          }} >
             <ShoppingCartOutlined/>
     </Badge>
           </MenuItem>
