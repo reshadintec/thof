@@ -43,6 +43,10 @@ const Icon = styled.div`
   background-color: #bf963f;
   cursor: pointer;
   color: white;
+  transition: all 0.5s ease;
+  &:hover{
+    transform: scale(1.1);
+  }
 `;
 
 

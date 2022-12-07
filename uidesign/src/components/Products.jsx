@@ -8,6 +8,9 @@ const Cotainer = styled.div`
   justify-content: flex-end;
   margin-left: 30px;
   flex-wrap: wrap;
+  @media(min-width:1400px){
+    margin-bottom: -100px;
+  }
 `;
 
 export const Products = () => {
