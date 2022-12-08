@@ -11,7 +11,7 @@ const Info = styled.div`
   justify-content: center;
   transition: all 0.5s ease;
   cursor: pointer;
-  @media(min-width: 1400px){
+  @media(min-width: 1440px){
     left:25%;
   }
 `;
