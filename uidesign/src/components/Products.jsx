@@ -8,7 +8,7 @@ const Cotainer = styled.div`
   justify-content: flex-end;
   margin-left: 30px;
   flex-wrap: wrap;
-  @media(min-width:1400px){
+  @media(min-width:1444px){
     margin-bottom: -100px;
   }
 `;

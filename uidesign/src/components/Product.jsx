@@ -5,7 +5,7 @@ const Info = styled.div`
   opacity: 0;
   position: absolute;
   top:60%;
-  left:8%;
+  right:35%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +20,7 @@ const Container = styled.div`
   flex: 1;
   display: flex;
   justify-content: space-between;
-  min-width: 260px;
+  min-width: 280px;
   height: 390px;
   position: relative;
 
@@ -28,13 +28,13 @@ const Container = styled.div`
     opacity: 1;
   }
  
-  @media(min-width:1400px){
+  @media(min-width:1444px){
     min-width: 500px;
     height: 650px;
   }
 `; 
 const Image = styled.img`
-  height: 75%;
+  height: 80%;
 `;
 
 const Icon = styled.div`
