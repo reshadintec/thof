@@ -122,44 +122,4 @@ export const poplularProducts = [
     gender: "Unisex",
     size: "100 ml"
   },
-  {
-    id: 9,
-    productname: 'Ormonde Woman',
-    img: 'https://uz.thehouseoffragrance.com/wp-content/uploads/sites/2/2022/10/ormonde-jayne-ormonde-woman.webp',
-    brand: "Ormonde Jayne",
-    strength: "Eau De Parfum",
-    price: "$133",
-    gender: "Women",
-    size: "120 ml"
-  },
-  {
-    id: 10,
-    productname: 'Imperial Emerald',
-    img: 'https://uz.thehouseoffragrance.com/wp-content/uploads/sites/2/2022/10/Imperial-Emerald-The-Merchant-of-Venice-1-600x600.webp',
-    brand: "The Merchant of Venice",
-    strength: "Eau De Parfum",
-    price: "$280",
-    gender: "Women",
-    size: "100 ml"
-  },
-  {
-    id: 11,
-    productname: 'Le Mat',
-    img: 'https://uz.thehouseoffragrance.com/wp-content/uploads/sites/2/2022/10/Le-Mat-Mendittorosa-1.webp',
-    brand: "Mendittorosa",
-    strength: "Extrait De Parfum",
-    price: "$250",
-    gender: "Unisex",
-    size: "100 ml"
-  },
-  {
-    id: 12,
-    productname: 'Ormonde Woman',
-    img: 'https://uz.thehouseoffragrance.com/wp-content/uploads/sites/2/2022/10/ormonde-jayne-ormonde-woman.webp',
-    brand: "Ormonde Jayne",
-    strength: "Eau De Parfum",
-    price: "$133",
-    gender: "Women",
-    size: "120 ml"
-  },
 ];
