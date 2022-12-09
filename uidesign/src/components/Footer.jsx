@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import LogoSrc from "../assets/GoldGradientmedium.png";
-import {FacebookOutlined, Instagram, LinkedIn, MailOutline, MapOutlined, Phone, Room, Twitter, YouTube} from '@mui/icons-material';
+import {FacebookOutlined, Instagram, LinkedIn, MailOutline, Phone, Room, Twitter, YouTube} from '@mui/icons-material';
 const Container = styled.div`
   height: 40vh;
   background-color: #0b0b0b;
   display: flex;
   justify-content: space-between;
   padding: 60px 3% 20px;
+  @media(min-width: 1440px){
+    height: 35vh;
+  }
 `;
 const Left = styled.div`
  flex: 1;
@@ -27,6 +30,9 @@ const Desc = styled.p`
   letter-spacing: 1.8px;
   width: 80%;
   margin-bottom: 30px;
+  @media(min-width: 1440px) {
+    width: 50%;
+  }
 `;
 
 const SocialIcons = styled.div`
@@ -58,9 +64,9 @@ const Center = styled.div`
 `;
 
 const Title= styled.h4`
-  color: white;
+  color: #bf963f;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 500;
   margin-bottom: 8%;
 `;
 
@@ -73,6 +79,7 @@ const Link = styled.a`
   transition: all 0.5s ease;
   &:hover{
     opacity: 1;
+    text-decoration: underline;
   }
 `;
 
@@ -87,10 +94,12 @@ const ContactContainer = styled.div`
 `;
 
 const ContactDesc = styled.p`
-  color:white;
-  font-weight: 200;
+  color: #e3cb99;
+  opacity: 0.8;
+  font-weight: 300;
+  letter-spacing: 1pt;
   font-size: 15px;
-  margin-left: 10px;
+  margin-left: 20px;
 `;
 
 
@@ -137,15 +146,15 @@ export const Footer = () => (
         Contact Details
       </Title>
       <ContactContainer>
-        <Room style={{fontSize:"1.8rem", color:"white"}}/>
+        <Room style={{fontSize:"1.8rem", backgroundColor:"#bf963f", padding:"5px", color:"white", cursor:"pointer"}}/>
         <ContactDesc>Some Address in my Town 3500</ContactDesc>
       </ContactContainer>
       <ContactContainer>
-        <Phone style={{fontSize:"1.8rem", color:"white"}}/>
-        <ContactDesc>+32 492 92 92 92</ContactDesc>
+        <Phone style={{fontSize:"1.8rem", backgroundColor:"#bf963f", padding:"5px", color:"white", cursor:"pointer"}}/>
+        <ContactDesc>+32 (0) 492 92 92 92</ContactDesc>
       </ContactContainer>
       <ContactContainer>
-        <MailOutline style={{fontSize:"1.8rem", color:"white"}}/>
+        <MailOutline style={{fontSize:"1.8rem", backgroundColor:"#bf963f", padding:"5px", color:"white", cursor:"pointer"}}/>
         <ContactDesc>mail@thehouseoffragrance.com</ContactDesc>
       </ContactContainer>
     </Right>
