@@ -4,7 +4,7 @@ import { CategoryItem } from './CategoryItem';
 
 const Container = styled.div`
   display: flex;
-  padding: 20px 40px; 
+  margin: 80px 75px 20px; 
   justify-content: space-between;
   align-items: center;
 `;

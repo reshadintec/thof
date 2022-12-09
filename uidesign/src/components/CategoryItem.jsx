@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const Container = styled.div `
   flex:1;
-  margin:10px;
+  margin:20px;
   position: relative;
 `;
 const Image = styled.img `

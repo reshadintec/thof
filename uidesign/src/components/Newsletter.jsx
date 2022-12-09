@@ -2,7 +2,7 @@ import { Send,  } from "@mui/icons-material";
 import styled from "styled-components"
 
 const Container = styled.div`
-  width:80%;
+  width:70%;
   height: 30vh;
   background: radial-gradient(circle, rgba(63,13,18,1) 10%, rgba(23,5,5,1) 50%);
   display: flex;
