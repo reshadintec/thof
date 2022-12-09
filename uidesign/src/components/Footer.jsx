@@ -120,7 +120,7 @@ const ContactDesc = styled.p`
 `;
 
 const Payment = styled.img`
-  max-width: 150px;
+  max-width: 200px;
   @media(min-width: 1442px){
     margin-top: 10px;
     max-width: 260px;
