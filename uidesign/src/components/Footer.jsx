@@ -92,7 +92,7 @@ const Link = styled.a`
     text-decoration: underline;
   }
   @media(min-width: 1442px){
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 `;
 
@@ -122,7 +122,8 @@ const ContactDesc = styled.p`
 const Payment = styled.img`
   max-width: 150px;
   @media(min-width: 1442px){
-    max-width: 220px;
+    margin-top: 10px;
+    max-width: 260px;
   }
 `;
 
@@ -180,7 +181,7 @@ export const Footer = () => (
         <MailOutline style={{fontSize:"1.5rem", backgroundColor:"#bf963f", padding:"5px", color:"white", cursor:"pointer"}}/>
         <ContactDesc>mail@thehouseoffragrance.com</ContactDesc>
       </ContactContainer>
-      <Payment src="https://best4o.9.indeed.pro/image/catalog/Logo/payment%20logo/logo-stripe.png"/>
+      <Payment src="https://shopdirect.mu/media//wysiwyg/icon-payment-methods-accepted-uk.png"/>
     </Right>
   </Container>
 )
