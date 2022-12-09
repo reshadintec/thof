@@ -7,19 +7,24 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 60px 3% 20px;
-  @media(min-width: 1440px){
-    height: 35vh;
+  @media(min-width: 1442px){
+    height: 36vh;
   }
 `;
 const Left = styled.div`
  flex: 1;
  display: flex;
  flex-direction: column;
+ flex-wrap: wrap;
+ align-content: center;
 `;
 
 const Logo= styled.img`
   width: 240px;
   margin-bottom: 30px;
+  @media(min-width: 1442px){
+    margin-bottom: 40px;
+  }
 `;
 
 const Desc = styled.p`
@@ -30,8 +35,10 @@ const Desc = styled.p`
   letter-spacing: 1.8px;
   width: 80%;
   margin-bottom: 30px;
-  @media(min-width: 1440px) {
+  @media(min-width: 1442px) {
     width: 50%;
+    line-height: 1.6;
+    margin-bottom: 40px;
   }
 `;
 
@@ -68,6 +75,9 @@ const Title= styled.h4`
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 8%;
+  @media(min-width: 1442px){
+    margin-bottom: 6%;
+  }
 `;
 
 const Link = styled.a`
@@ -81,10 +91,17 @@ const Link = styled.a`
     opacity: 1;
     text-decoration: underline;
   }
+  @media(min-width: 1442px){
+    margin-bottom: 20px;
+  }
 `;
 
 const Right = styled.div`
  flex: 1;
+ display: flex;
+ flex-direction: column;
+ flex-wrap: wrap;
+ align-content: center;
 `;
 
 const ContactContainer = styled.div`
@@ -102,6 +119,12 @@ const ContactDesc = styled.p`
   margin-left: 20px;
 `;
 
+const Payment = styled.img`
+  max-width: 150px;
+  @media(min-width: 1442px){
+    max-width: 220px;
+  }
+`;
 
 export const Footer = () => (
   <Container>
@@ -146,17 +169,18 @@ export const Footer = () => (
         Contact Details
       </Title>
       <ContactContainer>
-        <Room style={{fontSize:"1.8rem", backgroundColor:"#bf963f", padding:"5px", color:"white", cursor:"pointer"}}/>
+        <Room style={{fontSize:"1.5rem", backgroundColor:"#bf963f", padding:"5px", color:"white", cursor:"pointer"}}/>
         <ContactDesc>Some Address in my Town 3500</ContactDesc>
       </ContactContainer>
       <ContactContainer>
-        <Phone style={{fontSize:"1.8rem", backgroundColor:"#bf963f", padding:"5px", color:"white", cursor:"pointer"}}/>
+        <Phone style={{fontSize:"1.5rem", backgroundColor:"#bf963f", padding:"5px", color:"white", cursor:"pointer"}}/>
         <ContactDesc>+32 (0) 492 92 92 92</ContactDesc>
       </ContactContainer>
       <ContactContainer>
-        <MailOutline style={{fontSize:"1.8rem", backgroundColor:"#bf963f", padding:"5px", color:"white", cursor:"pointer"}}/>
+        <MailOutline style={{fontSize:"1.5rem", backgroundColor:"#bf963f", padding:"5px", color:"white", cursor:"pointer"}}/>
         <ContactDesc>mail@thehouseoffragrance.com</ContactDesc>
       </ContactContainer>
+      <Payment src="https://best4o.9.indeed.pro/image/catalog/Logo/payment%20logo/logo-stripe.png"/>
     </Right>
   </Container>
 )
