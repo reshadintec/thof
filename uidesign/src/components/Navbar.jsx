@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Badge from '@mui/material/Badge';
 import {SearchOutlined, ShoppingCartOutlined} from '@mui/icons-material';
 import LogoSrc from '..//assets/GoldGradientmedium.png'
+import { Link } from 'react-router-dom';
 const Container = styled.div`
   height: 80px;
   background-color: #0b0b0b;
@@ -75,7 +76,7 @@ const Navbar = () => {
             <SearchOutlined style={{fontSize:"16px"}}/>
           </SearchContainer>
         </Left>
-        <Center><Logo src={LogoSrc}/></Center>
+        <Center><Link to="/"><Logo src={LogoSrc}/></Link></Center>
         <Right>
           <MenuItem>Register</MenuItem>
           <MenuItem>Register</MenuItem>

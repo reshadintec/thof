@@ -3,7 +3,7 @@ import { poplularProducts } from "../data";
 import { Product } from "./Product";
 
 const MainContainer= styled.div`
-  margin: 100px 0 ;
+  margin: 20px 0 100px ;
   padding: 20px 0;
   background: radial-gradient(circle, rgba(63,13,18,1) 0%, rgba(23,5,5,1) 50%);
 `
