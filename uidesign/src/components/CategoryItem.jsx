@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import { Link } from "react-router-dom";
 const Container = styled.div `
   flex:1;
   margin:20px;
@@ -39,7 +39,9 @@ export const CategoryItem = ({item}) => {
     <Container>
       <Image src={item.img}/>
       <Info>
-        <Title>{item.title}</Title>
+        <Title><Link to="/shop"
+        style={{color:"white",textDecoration:"none"}}
+        >{item.title}</Link></Title>
       </Info>
     </Container>
   )
