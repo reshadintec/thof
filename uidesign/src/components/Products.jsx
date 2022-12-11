@@ -33,10 +33,10 @@ const Line = styled.hr`
   border-bottom: 2px solid #e3cb99;
 `
 
-export const Products = () => {
+export const Products = (props) => {
   return (
     <MainContainer>
-    <Title>Featured Products</Title>
+    <Title>{props.title}</Title>
     <Line></Line>
     <Cotainer>
       {poplularProducts.map((item) =>(
