@@ -79,11 +79,16 @@ const Amount= styled.span`
 `;
 const Button= styled.button`
   background-color: #bf963f;
+  border:none;
   color:white;
   padding: 10px 30px;
   font-size: 1.2rem;
   font-weight: 300;
   cursor: pointer;
+  transition: all 0.5s ease;
+  &:hover{
+    background-color: #aa771c;
+  }
 `;
 
 export const SingleProduct = () => {
