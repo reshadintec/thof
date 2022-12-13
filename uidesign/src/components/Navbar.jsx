@@ -78,8 +78,8 @@ const Navbar = () => {
         </Left>
         <Center><Link to="/"><Logo src={LogoSrc}/></Link></Center>
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Register</MenuItem>
+          <Link to="/register"><MenuItem>REGISTER</MenuItem></Link>
+          <Link to='/sign-in'><MenuItem>SIGN IN</MenuItem></Link>
           <MenuItem>
             <Badge badgeContent={2}
             sx={{
