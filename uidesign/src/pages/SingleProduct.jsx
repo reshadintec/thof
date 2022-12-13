@@ -40,7 +40,7 @@ const Image = styled.img`
 `;
 
 const Line = styled.hr`
-  width: 70%;
+  width: 95%;
   margin: 20px 0;
   border: none;
   border-bottom: 2px solid #e3cc9975;
@@ -61,13 +61,13 @@ const InfoContainer = styled.div`
 const Title = styled.h4`
   font-size: 2.5rem;
   color: #e3cb99;
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 10px;
 `;
 
 const Price = styled.span`
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 200;
   color: #e3cb99;
   
 `;
@@ -88,17 +88,19 @@ const Desc = styled.p`
 const ProductInfo=styled.div`
   display: flex;
   align-items: center;
-  
 `;
 
-const InfoTitle= styled.h6`
+const InfoTitle= styled.h4`
   color: lightgray;
-
+  font-weight: 300;
+  
 `;
 
 const InfoDesc = styled.h4`
   color: white;
-  margin:0  20px 0 10px;`;
+  margin:0  40px 0 10px;
+  font-weight: 200;
+  `;
 
 const AddContainer= styled.div`
   display: flex;
@@ -109,9 +111,9 @@ const AmountContainer= styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border: 1px solid #e3cc9975;
-  margin-right: 20px;
+  margin-right: 40px;
   color:#e3cb99;
 `;
 const Amount= styled.span`
@@ -121,7 +123,7 @@ const Button= styled.button`
   background-color: #bf963f;
   border:none;
   color:white;
-  padding: 5px 10px;
+  padding: 15px 40px;
   font-size: 1.2rem;
   font-weight: 300;
   cursor: pointer;
@@ -154,10 +156,13 @@ export const SingleProduct = () => {
          <Line/>
          <ProductInfo>
             <InfoTitle>Gender:</InfoTitle>
-            <InfoDesc>Unisxex</InfoDesc>
+            <InfoDesc>Unisex</InfoDesc>
             <InfoTitle>Size:</InfoTitle>
             <InfoDesc>120 ml</InfoDesc>
+            <InfoTitle>Strength:</InfoTitle>
+            <InfoDesc>Eau De Parfum</InfoDesc>
          </ProductInfo>
+         <Line/>
          <AddContainer>
            <AmountContainer>
               <Remove style={{fontSize:"1rem",cursor:"pointer"}}/>
