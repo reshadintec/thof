@@ -120,7 +120,7 @@ const ContactDesc = styled.p`
 `;
 
 const Payment = styled.img`
-  max-width: 200px;
+  max-width: 260px;
   @media(min-width: 1442px){
     margin-top: 10px;
     max-width: 260px;
@@ -181,7 +181,7 @@ export const Footer = () => (
         <MailOutline style={{fontSize:"1.5rem", backgroundColor:"#bf963f", padding:"5px", color:"white", cursor:"pointer"}}/>
         <ContactDesc>mail@thehouseoffragrance.com</ContactDesc>
       </ContactContainer>
-      <Payment src="https://shopdirect.mu/media//wysiwyg/icon-payment-methods-accepted-uk.png"/>
+      <Payment src="https://www.dermacaredirect.co.uk/media/wysiwyg/paypal-cards.png"/>
     </Right>
   </Container>
 )
