@@ -4,7 +4,10 @@ import { Footer } from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { Newsletter } from '../components/Newsletter';
 const Container = styled.div`
-  
+  background: url("https://images.unsplash.com/photo-1543422655-ac1c6ca993ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 `;
 
 const RegisterContainer = styled.div`
