@@ -59,12 +59,19 @@ const  Image = styled.img`
   width: 300px;
   margin-right: 20px;
 `;
-const  Details = styled.div``;
+const  Details = styled.div`
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
 const  ProductName = styled.div``;
 const  ProductSize = styled.div``;
 const  ProductGender = styled.div``;
 const  ProductStrength = styled.div``;
-const  PriceDetail = styled.div``; 
+const  PriceDetail = styled.div`
+ 
+`; 
 
 
 
@@ -82,7 +89,7 @@ export const Cart = () => {
        <Top>
         <TopButton>Continue Shopping</TopButton>
         <TopButton type="filled">Checkout Now</TopButton>
-       </Top>
+       </Top>  
        <Bottom>
         <Info>
           <Product>
