@@ -109,16 +109,47 @@ const PriceContainer = styled.div`
   align-items: center;
 `;
 const Summary = styled.div`
-  flex:1 ; 
+  flex:1 ;
+  padding: 40px;
+  background: radial-gradient(circle, rgba(63,13,18,1) 0%, rgba(23,5,5,1) 50%);
+  color: #fffbd2;
 `;
 
 const Line = styled.hr`
-  color: gray;
   width: 100%;
   margin: 20px 0;
   border: none;
-  border-bottom: 2px solid lightgray;
-`
+  border-bottom: 1.5px solid #84848475;
+`;
+
+const SummaryDetails = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+`;
+
+const OrderSummary = styled.h2`
+  font-weight: 300;
+  margin-bottom: 40px;
+`;
+
+const Total = styled.h2`
+  font-weight: 300;
+  `;
+
+const Button = styled.button`
+  width: 100%;
+  margin-top: 50px;
+  background-color: #e3cb99;
+  border: none;
+  padding: 10px 0;
+  cursor: pointer; 
+  color: #170505;
+  transition: all 0.6s ease;
+  &:hover{
+    background-color: #bf963f;
+  }
+`;
 
 export const Cart = () => {
   return (
@@ -175,9 +206,44 @@ export const Cart = () => {
              <ProductItem><Close sx={{fontSize: "20px"}}/></ProductItem>
           </Product> 
           <Line/>
+          <Product>
+             <ProductItem>
+              <Image src="https://uz.thehouseoffragrance.com/wp-content/uploads/sites/2/2022/10/Masque-Milano-Tango.webp"/>
+              <ProductTitle>Masque Milano Tango</ProductTitle>
+             </ProductItem>
+             <ProductItem>
+              <ProductText>$ 132</ProductText>
+             </ProductItem>
+             <ProductItem>
+              <PriceContainer>
+                <Remove sx={{fontSize: "16px"}}/>
+                <ProductText kind="qty">1</ProductText>
+                <Add sx={{fontSize: "16px"}}/>
+              </PriceContainer>
+             </ProductItem>
+             <ProductItem><Close sx={{fontSize: "20px"}}/></ProductItem>
+          </Product> 
+          <Line/>
         </Info>
         <Summary>
-          Summary
+          <OrderSummary>Order Summary</OrderSummary>
+          <SummaryDetails>
+            <ProductText>Subtotal</ProductText>
+            <ProductText>$132</ProductText>
+          </SummaryDetails>
+          <SummaryDetails>
+            <ProductText>Estimated Shipping</ProductText>
+            <ProductText>$6.70</ProductText>
+          </SummaryDetails>
+          <SummaryDetails>
+            <ProductText>Shipping Discount</ProductText>
+            <ProductText>-6.70</ProductText>
+          </SummaryDetails>
+          <SummaryDetails style={{marginTop:"40px"}}>
+            <Total>Total</Total>
+            <ProductText style={{fontSize:"24px"}}>$80</ProductText>
+          </SummaryDetails>
+          <Button>PROCEED TO CHECKOUT</Button>
         </Summary>
        </Bottom>
       </CartContainer>
