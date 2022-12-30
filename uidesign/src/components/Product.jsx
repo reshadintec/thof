@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import {FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined} from '@mui/icons-material/';
+import { mobile } from "../responsive";
 
 const Info = styled.div`
   opacity: 0;
@@ -13,7 +14,9 @@ const Info = styled.div`
   cursor: pointer;
   @media(min-width: 1440px){
     left:25%;
-  }
+  };
+  ${mobile({right: "10%"})};
+
 `;
 
 const Container = styled.div`
@@ -32,7 +35,7 @@ const Container = styled.div`
     padding-bottom: 80px;
     min-width: 380px;
     height: 400px;
-  }
+  };
 `; 
 const Image = styled.img`
   border: 1px solid #e3cc9975;

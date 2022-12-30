@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { poplularProducts } from "../data";
 import { Product } from "./Product";
+import {mobile} from "../responsive"
 
 const MainContainer= styled.div`
   margin: 20px 0 100px ;
@@ -13,9 +14,11 @@ const Cotainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
+  ${mobile({gridTemplateColumns: "1fr",margin:"0 auto"})};
   @media(min-width:1444px){
     margin-bottom:;
-  }
+  };
+  
 `;
 
 const Title= styled.h2`
@@ -24,6 +27,8 @@ const Title= styled.h2`
   margin: 20px auto;
   text-align: center;
   color:white;
+  ${mobile({fontSize: "2rem"})};
+
 `;
 
 const Line = styled.hr`
