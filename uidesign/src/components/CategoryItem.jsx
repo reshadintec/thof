@@ -1,9 +1,11 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom";
+import { mobile } from "../responsive";
 const Container = styled.div `
   flex:1;
   margin:20px;
   position: relative;
+  ${mobile({margin:"14px 0"})}
 `;
 const Image = styled.img `
   width: 100%;

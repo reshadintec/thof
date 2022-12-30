@@ -8,7 +8,6 @@ const Container = styled.div``;
 
 const CartContainer = styled.div`
   padding: 20px;
-  height: 85vh;
 `;
 
 const Title = styled.h2`
@@ -43,13 +42,19 @@ const Bottom = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 60px;
+  margin: 40px 0;
+  height: 100%;
 `;
 const Info = styled.div`
   flex: 3;
   display: flex;
+ flex-wrap: wrap;
   flex-direction: column;
-  margin-right: 20px;
+  margin-right: 40px;
+  padding: 40px;
+  background: radial-gradient(circle, rgba(63,13,18,1) 0%, rgba(23,5,5,1) 50%);
+  color: #e3cb99;
+  height: auto;
 `;
 
 const Titles = styled.div`
@@ -93,6 +98,7 @@ const ProductItem = styled.div`
 const  Image = styled.img`
   width: 60px;
   margin-right: 20px;
+  border: 1px solid #e3cc9975;
 `;
 
 const ProductTitle = styled.h4`
@@ -111,8 +117,10 @@ const PriceContainer = styled.div`
 const Summary = styled.div`
   flex:1 ;
   padding: 40px;
+  flex-wrap: wrap;
   background: radial-gradient(circle, rgba(63,13,18,1) 0%, rgba(23,5,5,1) 50%);
   color: #fffbd2;
+  height: 100%;
 `;
 
 const Line = styled.hr`
@@ -180,12 +188,12 @@ export const Cart = () => {
              </ProductItem>
              <ProductItem>
               <PriceContainer>
-                <Remove sx={{fontSize: "16px"}}/>
+                <Remove sx={{fontSize: "16px",cursor:"pointer"}}/>
                 <ProductText kind="qty">1</ProductText>
-                <Add sx={{fontSize: "16px"}}/>
+                <Add sx={{fontSize: "16px",cursor:"pointer"}}/>
               </PriceContainer>
              </ProductItem>
-             <ProductItem><Close sx={{fontSize: "20px"}}/></ProductItem>
+             <ProductItem><Close sx={{fontSize: "20px",cursor:"pointer"}}/></ProductItem>
           </Product> 
           <Line/>
           <Product>
@@ -198,30 +206,12 @@ export const Cart = () => {
              </ProductItem>
              <ProductItem>
               <PriceContainer>
-                <Remove sx={{fontSize: "16px"}}/>
+                <Remove sx={{fontSize: "16px",cursor:"pointer"}}/>
                 <ProductText kind="qty">1</ProductText>
-                <Add sx={{fontSize: "16px"}}/>
+                <Add sx={{fontSize: "16px",cursor:"pointer"}}/>
               </PriceContainer>
              </ProductItem>
-             <ProductItem><Close sx={{fontSize: "20px"}}/></ProductItem>
-          </Product> 
-          <Line/>
-          <Product>
-             <ProductItem>
-              <Image src="https://uz.thehouseoffragrance.com/wp-content/uploads/sites/2/2022/10/Masque-Milano-Tango.webp"/>
-              <ProductTitle>Masque Milano Tango</ProductTitle>
-             </ProductItem>
-             <ProductItem>
-              <ProductText>$ 132</ProductText>
-             </ProductItem>
-             <ProductItem>
-              <PriceContainer>
-                <Remove sx={{fontSize: "16px"}}/>
-                <ProductText kind="qty">1</ProductText>
-                <Add sx={{fontSize: "16px"}}/>
-              </PriceContainer>
-             </ProductItem>
-             <ProductItem><Close sx={{fontSize: "20px"}}/></ProductItem>
+             <ProductItem><Close sx={{fontSize: "20px",cursor:"pointer"}}/></ProductItem>
           </Product> 
           <Line/>
         </Info>
