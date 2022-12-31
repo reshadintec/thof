@@ -2,12 +2,15 @@ import styled from "styled-components"
 import Announcement from "../components/Announcement";
 import { Footer } from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   background: url("https://images.unsplash.com/photo-1543422655-ac1c6ca993ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  ${mobile({backgroundSize:"cover"})};
+
 `;
 
 const Login = styled.div`
@@ -17,6 +20,8 @@ const Login = styled.div`
   margin: 90px auto;
   color: #e3cb99;
   padding: 30px 0 30px 50px;
+  ${mobile({width:"70%",margin:"100px auto"})};
+
 `;
 
 const Title = styled.h2`
