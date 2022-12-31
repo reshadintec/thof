@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import LogoSrc from "../assets/GoldGradientmedium.png";
 import {FacebookOutlined, Instagram, LinkedIn, MailOutline, Phone, Room, Twitter, YouTube} from '@mui/icons-material';
+import { mobile } from "../responsive";
 const Container = styled.div`
   height: 40vh;
   background-color: #0b0b0b;
@@ -9,7 +10,8 @@ const Container = styled.div`
   padding: 60px 3% 20px;
   @media(min-width: 1442px){
     height: 36vh;
-  }
+  };
+   ${mobile({height:"auto",flexDirection: "column",gap:"2em"})};
 `;
 const Left = styled.div`
  flex: 1;
@@ -68,6 +70,7 @@ const Center = styled.div`
  flex-direction: column;
  flex-wrap: wrap;
  align-content: center;
+  ${mobile({display:"none"})};
 `;
 
 const Title= styled.h4`

@@ -4,6 +4,7 @@ import { Footer } from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { Newsletter } from "../components/Newsletter";
 import { Products } from "../components/Products";
+import { mobile } from "../responsive";
 
 const Cotainer = styled.div`
 `;
@@ -20,18 +21,21 @@ const FilterContainer = styled.div`
   justify-content: space-between;
 `;
 const Filter = styled.div`
-
+ 
 `;
 
 const FilterText = styled.span`
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   margin-right: 20px;
+   ${mobile({fontSize:"14px"})};
 `;
 
 const Select = styled.select`
   padding: 10px;
   margin-right: 20px;
+  ${mobile({padding:"2px",marginTop:"5px"})};
+
 `;
 const Option = styled.option``;
 
