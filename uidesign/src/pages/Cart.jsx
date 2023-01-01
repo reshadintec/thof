@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import { Footer } from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { mobile } from "../responsive";
 
 const Container = styled.div``;
 
@@ -44,17 +45,18 @@ const Bottom = styled.div`
   justify-content: space-between;
   margin: 40px 0;
   height: 100%;
+  ${mobile({margin:"40px 0",flexDirection:"column"})};
 `;
 const Info = styled.div`
   flex: 3;
   display: flex;
- flex-wrap: wrap;
   flex-direction: column;
   margin-right: 40px;
   padding: 40px;
   background: radial-gradient(circle, rgba(63,13,18,1) 0%, rgba(23,5,5,1) 50%);
   color: #e3cb99;
   height: auto;
+  ${mobile({marginRight:"0",flex:"1",padding:"20px",fontSize:"smaller"})}
 `;
 
 const Titles = styled.div`
@@ -117,10 +119,9 @@ const PriceContainer = styled.div`
 const Summary = styled.div`
   flex:1 ;
   padding: 40px;
-  flex-wrap: wrap;
   background: radial-gradient(circle, rgba(63,13,18,1) 0%, rgba(23,5,5,1) 50%);
   color: #fffbd2;
-  height: 100%;
+  ${mobile({marginTop:"40px",width:"75%",padding:"40px"})}
 `;
 
 const Line = styled.hr`
