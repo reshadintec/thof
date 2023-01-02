@@ -12,6 +12,7 @@ mongoose
     {console.log(err)
     });
 
+app.use(express.json());
 app.use("/api/users",userRoute);
 
 app.listen(process.env.PORT || 5000, ()=>{
