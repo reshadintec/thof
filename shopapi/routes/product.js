@@ -1,4 +1,3 @@
-const { query } = require("express");
 const Product = require("../models/Product");
 const { verifyToken, veriftyTokenAndAuthorization, veriftyTokenAndAdmin } = require("./veriftyToken");
 
