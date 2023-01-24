@@ -53,23 +53,51 @@ export const Products = ({gender,filters, sort, title}) => {
           gender
           ?`http://localhost:5001/api/products?gender=${gender}`
           :"http://localhost:5001/api/products")
-        console.log(res)
+        setProducts(res.data);
       }catch(err){
 
       }
     };
     getProducts();
-  },[gender])
+  },[gender]);
 
+  useEffect(() => {
+    gender &&
+      setFilteredProducts(
+        products.filter((item) =>
+          Object.entries(filters).every(([key, value]) =>
+            item[key].includes(value)
+          )
+        )
+      );
+  }, [products, gender, filters]);
+
+  useEffect(() => {
+    if (sort === "newest") {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) => a.createdAt - b.createdAt)
+      );
+    } else if (sort === "asc") {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) => a.price - b.price)
+      );
+    } else {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) => b.price - a.price)
+      );
+    }
+  }, [sort]);
 
   return (
     <MainContainer>
     <Title>{title}</Title>
     <Line></Line>
     <Cotainer>
-      {poplularProducts.map((item) =>(
-        <Product item={item} key={item.id}/>
-      ))}
+      {gender
+        ? filteredProducts.map((item) => <Product item={item} key={item.id} />)
+        : products
+            .slice(0, 8)
+            .map((item) => <Product item={item} key={item.id} />)}
     </Cotainer>
     </MainContainer>
   )

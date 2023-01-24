@@ -54,7 +54,6 @@ export const Shop = () => {
       [e.target.name]: value,
     });
   };
-  console.log(filters);
   return (
     <Cotainer>
       <Announcement/>
@@ -84,14 +83,13 @@ export const Shop = () => {
           <FilterText>Sort Products:</FilterText>
           <Select onChange={(e) => setSort(e.target.value)}>
             <Option value="newest" >Newest</Option>
-            <Option value="featured">Featured</Option>
             <Option value="asc">Price (asc)</Option>
             <Option value="desc">Price (desc)</Option>
           </Select>
         </Filter>
       </FilterContainer>
       </ShopContainer>
-      <Products gender={gender} filters={filters} sort={sort}title="Products"/>
+      <Products gender={gender} filters={filters} sort={sort} title="Products"/>
       <Newsletter/>
       <Footer/>
     </Cotainer>
