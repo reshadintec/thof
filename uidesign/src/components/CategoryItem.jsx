@@ -41,7 +41,7 @@ export const CategoryItem = ({item}) => {
     <Container>
       <Image src={item.img}/>
       <Info>
-        <Title><Link to="/shop"
+        <Title><Link to={`/shop/${item.cat}`}
         style={{color:"white",textDecoration:"none"}}
         >{item.title}</Link></Title>
       </Info>

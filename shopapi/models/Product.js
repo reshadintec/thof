@@ -7,8 +7,9 @@ const ProductSchema = new mongoose.Schema(
     img: { type: String, reuired: true },
     price: { type: Number, reuired: true },
     gender: { type: String },
-    size: {type: String},
+    size: {type: Array},
     strength: {type: String},
+    inStock: {type: Boolean, default: true},
   },
   { timestamps: true }
 );

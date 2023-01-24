@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import { Footer } from "../components/Footer";
@@ -40,6 +42,19 @@ const Select = styled.select`
 const Option = styled.option``;
 
 export const Shop = () => {
+  const location = useLocation();
+  const gender = location.pathname.split("/")[2];
+  const [filters,setFilters] = useState({});
+  const [sort,setSort] = useState("newest");
+
+  const handleFilters = (e)=>{
+    const value = e.target.value;
+    setFilters({
+      ...filters,
+      [e.target.name]: value,
+    });
+  };
+  console.log(filters);
   return (
     <Cotainer>
       <Announcement/>
@@ -49,8 +64,8 @@ export const Shop = () => {
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
-          <Select>
-            <Option disabled selected>Size</Option>
+          <Select name="size" onChange={handleFilters}>
+            <Option disabled >Size</Option>
             <Option>30 ml</Option>
             <Option>35 ml</Option>
             <Option>50 ml</Option>
@@ -58,8 +73,8 @@ export const Shop = () => {
             <Option>100 ml</Option>
             <Option>120 ml</Option>
           </Select>
-          <Select>
-            <Option disabled selected>Gender</Option>
+          <Select name="gender" onChange={handleFilters}>
+            <Option disabled >Gender</Option>
             <Option>Men</Option>
             <Option>Women</Option>
             <Option>Unisex</Option>
@@ -67,16 +82,16 @@ export const Shop = () => {
         </Filter>
         <Filter>
           <FilterText>Sort Products:</FilterText>
-          <Select>
-            <Option selected>Newest</Option>
-            <Option>Featured</Option>
-            <Option>Price (asc)</Option>
-            <Option>Price (desc)</Option>
+          <Select onChange={(e) => setSort(e.target.value)}>
+            <Option value="newest" >Newest</Option>
+            <Option value="featured">Featured</Option>
+            <Option value="asc">Price (asc)</Option>
+            <Option value="desc">Price (desc)</Option>
           </Select>
         </Filter>
       </FilterContainer>
       </ShopContainer>
-      <Products title="Products"/>
+      <Products gender={gender} filters={filters} sort={sort}title="Products"/>
       <Newsletter/>
       <Footer/>
     </Cotainer>

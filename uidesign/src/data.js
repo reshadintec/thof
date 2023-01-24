@@ -27,17 +27,20 @@ export const categories = [
   {
     id: 1,
     img: "https://i.ibb.co/SBHc5c5/perfumesforher.webp",
-    title: "Perfumes For Her "
+    title: "Perfumes For Her ",
+    cat : "women"
   },
   {
     id: 2,
     img: "https://i.ibb.co/WWHZYs0/perfumesforhim.webp",
-    title: "Perfumes For Him"
+    title: "Perfumes For Him",
+    cat : "men"
   }, 
   {
     id: 3,
     img: "https://i.ibb.co/g94DW9b/unixexperfumes.webp",
-    title: "Unisex Perfumes"
+    title: "Unisex Perfumes",
+    cat: "unisex"
   },
 ];
 

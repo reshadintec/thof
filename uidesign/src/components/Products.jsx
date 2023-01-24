@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { poplularProducts } from "../data";
 import { Product } from "./Product";
 import {mobile} from "../responsive"
+import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
 
 const MainContainer= styled.div`
   margin: 20px 0 100px ;
@@ -39,10 +42,29 @@ const Line = styled.hr`
   border-bottom: 2px solid #e3cb99;
 `
 
-export const Products = (props) => {
+export const Products = ({gender,filters, sort, title}) => {
+  const [products,setProducts] = useState([]);
+  const [filteredProducts,setFilteredProducts] = useState([]);
+  
+  useEffect(()=>{
+    const getProducts = async ()=>{
+      try{
+        const res = await axios.get(
+          gender
+          ?`http://localhost:5001/api/products?gender=${gender}`
+          :"http://localhost:5001/api/products")
+        console.log(res)
+      }catch(err){
+
+      }
+    };
+    getProducts();
+  },[gender])
+
+
   return (
     <MainContainer>
-    <Title>{props.title}</Title>
+    <Title>{title}</Title>
     <Line></Line>
     <Cotainer>
       {poplularProducts.map((item) =>(
