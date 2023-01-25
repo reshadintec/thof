@@ -4,6 +4,7 @@ import Badge from '@mui/material/Badge';
 import {SearchOutlined, ShoppingCartOutlined} from '@mui/icons-material';
 import LogoSrc from '..//assets/GoldGradientmedium.png'
 import { Link } from 'react-router-dom';
+import { useSelector } from "react-redux";
 import {mobile} from "../responsive"
 
 const Container = styled.div`
@@ -75,6 +76,7 @@ const MenuItem = styled.div`
   ${mobile({fontSize: "10px", marginLeft: "10px"})}
 `
 const Navbar = () => {
+  const quantity = useSelector(state=>state.cart.quantity)
   return (
     <Container>
       <Wrapper>
@@ -89,8 +91,9 @@ const Navbar = () => {
         <Right>
           <Link to="/register"><MenuItem>REGISTER</MenuItem></Link>
           <Link to='/sign-in'><MenuItem>SIGN IN</MenuItem></Link>
+          <Link to="/cart">
           <MenuItem>
-            <Badge badgeContent={2}
+            <Badge badgeContent={quantity}
             sx={{
             "& .MuiBadge-badge": {
               color: "#670404",
@@ -100,6 +103,7 @@ const Navbar = () => {
             <ShoppingCartOutlined/>
     </Badge>
           </MenuItem>
+          </Link>
         </Right>
       </Wrapper>
     </Container>

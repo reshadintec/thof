@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { poplularProducts } from "../data";
 import { Product } from "./Product";
 import {mobile} from "../responsive"
 import { useState } from "react";

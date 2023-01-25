@@ -1,9 +1,18 @@
 import { Add, Close, Remove } from "@mui/icons-material";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import { Footer } from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { mobile } from "../responsive";
+import StripeCheckout from "react-stripe-checkout";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { userRequest } from "../requestMethod";
+
+
+const KEY = process.env.REACT_APP_STRIPE;
 
 const Container = styled.div``;
 
@@ -89,6 +98,7 @@ const ProductItem = styled.div`
   align-items: center;
   flex-direction: column;
   align-content: center;
+  padding: 10px 0;
   &:first-child{
     flex:2;
   };
@@ -124,13 +134,6 @@ const Summary = styled.div`
   ${mobile({marginTop:"40px",width:"75%",padding:"40px"})}
 `;
 
-const Line = styled.hr`
-  width: 100%;
-  margin: 20px 0;
-  border: none;
-  border-bottom: 1.5px solid #84848475;
-`;
-
 const SummaryDetails = styled.div`
   display: flex;
   justify-content: space-between;
@@ -161,7 +164,30 @@ const Button = styled.button`
 `;
 
 export const Cart = () => {
-  return (
+  const cart = useSelector((state) => state.cart);
+  const [stripeToken, setStripeToken] = useState(null);
+  const navigate = useNavigate();
+
+
+  const onToken = (token) => {
+    setStripeToken(token);
+  };
+
+  useEffect(() => {
+    const makeRequest = async () => {
+      try {
+        const res = await userRequest.post("/checkout/payment", {
+          tokenId: stripeToken.id,
+          amount: cart.total * 100,
+        });
+        navigate("/success", {
+          data: res.data });
+      } catch {}
+    };
+    stripeToken && cart.total>=1 && makeRequest();
+  }, [stripeToken, cart.total, cart, navigate]);
+
+    return (
     <Container>
       <Announcement/>
       <Navbar/>
@@ -179,48 +205,30 @@ export const Cart = () => {
             <SingleTitle>QUANTITY</SingleTitle>
             <SingleTitle>REMOVE</SingleTitle>
           </Titles>
-          <Product>
+          {cart.products.map(product=>(
+           <Product>
              <ProductItem>
-              <Image src="https://uz.thehouseoffragrance.com/wp-content/uploads/sites/2/2022/10/Masque-Milano-Tango.webp"/>
-              <ProductTitle>Masque Milano Tango</ProductTitle>
+              <Image src={product.img}/>
+              <ProductTitle>{product.title}</ProductTitle>
              </ProductItem>
              <ProductItem>
-              <ProductText>$ 132</ProductText>
-             </ProductItem>
-             <ProductItem>
-              <PriceContainer>
-                <Remove sx={{fontSize: "16px",cursor:"pointer"}}/>
-                <ProductText kind="qty">1</ProductText>
-                <Add sx={{fontSize: "16px",cursor:"pointer"}}/>
-              </PriceContainer>
-             </ProductItem>
-             <ProductItem><Close sx={{fontSize: "20px",cursor:"pointer"}}/></ProductItem>
-          </Product> 
-          <Line/>
-          <Product>
-             <ProductItem>
-              <Image src="https://uz.thehouseoffragrance.com/wp-content/uploads/sites/2/2022/10/Masque-Milano-Tango.webp"/>
-              <ProductTitle>Masque Milano Tango</ProductTitle>
-             </ProductItem>
-             <ProductItem>
-              <ProductText>$ 132</ProductText>
+              <ProductText>$ {product.price}</ProductText>
              </ProductItem>
              <ProductItem>
               <PriceContainer>
                 <Remove sx={{fontSize: "16px",cursor:"pointer"}}/>
-                <ProductText kind="qty">1</ProductText>
+                <ProductText kind="qty">{product.quantity}</ProductText>
                 <Add sx={{fontSize: "16px",cursor:"pointer"}}/>
               </PriceContainer>
              </ProductItem>
-             <ProductItem><Close sx={{fontSize: "20px",cursor:"pointer"}}/></ProductItem>
-          </Product> 
-          <Line/>
+             <ProductItem><Close sx={{fontSize: "20px",cursor:"pointer"}}/></ProductItem> 
+          </Product> ))}
         </Info>
         <Summary>
           <OrderSummary>Order Summary</OrderSummary>
           <SummaryDetails>
             <ProductText>Subtotal</ProductText>
-            <ProductText>$132</ProductText>
+            <ProductText>$ {cart.total}</ProductText>
           </SummaryDetails>
           <SummaryDetails>
             <ProductText>Estimated Shipping</ProductText>
@@ -232,9 +240,20 @@ export const Cart = () => {
           </SummaryDetails>
           <SummaryDetails style={{marginTop:"40px"}}>
             <Total>Total</Total>
-            <ProductText style={{fontSize:"24px"}}>$80</ProductText>
+            <ProductText style={{fontSize:"24px"}}>$ {cart.total}</ProductText>
           </SummaryDetails>
-          <Button>PROCEED TO CHECKOUT</Button>
+          <StripeCheckout
+          name = "The House of Fragrance"
+          image = "https://i.ibb.co/BsvvJJR/favicon.png"
+          billingAddress
+          shippingAddress
+          description={`Your total is $${cart.total}`}
+          amount={cart.total * 100}
+          token={onToken}
+          stripeKey={KEY}
+          >
+            <Button>CHECKOUT NOW</Button>
+          </StripeCheckout>
         </Summary>
        </Bottom>
       </CartContainer>

@@ -1,9 +1,14 @@
 import { Add, Remove } from "@mui/icons-material";
+import { useState , useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import { Footer } from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { Newsletter } from "../components/Newsletter";
+import { addProduct } from "../redux/cartRedux";
+import { publicRequest } from "../requestMethod";
+import { useDispatch } from "react-redux";
 
 const Container = styled.div`
   
@@ -133,43 +138,68 @@ const Button= styled.button`
   }
 `;
 
-const BrandName = styled.h4`
-  
-`;
 
 
 export const SingleProduct = () => {
+  const location = useLocation();
+  const id = location.pathname.split("/")[2];
+  const [product, setProduct] = useState({});
+  const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const getProduct = async () => {
+      try {
+        const res = await publicRequest.get("/products/find/" + id);
+        setProduct(res.data);
+      } catch {}
+    };
+    getProduct();
+  }, [id]);
+
+  const handleQuantity = (type) => {
+    if (type === "dec") {
+      quantity > 1 && setQuantity(quantity - 1);
+    } else {
+      setQuantity(quantity + 1);
+    }
+  };
+
+  const handleClick = () => {
+    dispatch(
+      addProduct({ ...product, quantity})
+    );
+  };
   return (
     <Container>
       <Announcement />
       <Navbar />
       <ProductContainer>
         <ImageContainer>
-          <Image src="https://uz.thehouseoffragrance.com/wp-content/uploads/sites/2/2022/10/Le-Mat-Mendittorosa-1.webp"></Image>  
+          <Image src={product.img}></Image>  
         </ImageContainer>
         <InfoContainer>
-          <Title>Mendittorosa Le Mat</Title>
-          <Price>$250</Price>
+          <Title>{product.title}</Title>
+          <Price>$ {product.price}</Price>
           <Line/>
-          <Desc>A perfume of divination and tarotology.  Le Mat, The Fool and Journeyman. Chance, enigma and propulsion. End and beginning. A card of 0 and XXII.  A powerful icon of the Major Arcana, cards of symbols and numbers that portend future and fate.  We must turn over cards and accept fate, walk forward into new futures, lives and loves.
+          <Desc>{product.desc}
          </Desc>
          <Line/>
          <ProductInfo>
             <InfoTitle>Gender:</InfoTitle>
-            <InfoDesc>Unisex</InfoDesc>
+            <InfoDesc>{product.gender}</InfoDesc>
             <InfoTitle>Size:</InfoTitle>
-            <InfoDesc>120 ml</InfoDesc>
+            <InfoDesc>{product.size}</InfoDesc>
             <InfoTitle>Strength:</InfoTitle>
-            <InfoDesc>Eau De Parfum</InfoDesc>
+            <InfoDesc>{product.strength}</InfoDesc>
          </ProductInfo>
          <Line/>
          <AddContainer>
            <AmountContainer>
-              <Remove style={{fontSize:"1rem",cursor:"pointer"}}/>
-              <Amount>1</Amount>
-              <Add style={{fontSize:"1rem",cursor:"pointer"}}/>
+              <Remove style={{fontSize:"1rem",cursor:"pointer"}} onClick={() => handleQuantity("dec")}/>
+              <Amount>{quantity}</Amount>
+              <Add style={{fontSize:"1rem",cursor:"pointer"}} onClick={() => handleQuantity("inc")}/>
            </AmountContainer>
-           <Button>ADD TO CART</Button>
+           <Button onClick={handleClick}>ADD TO CART</Button>
          </AddContainer>
         </InfoContainer> 
       </ProductContainer>
