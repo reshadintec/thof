@@ -1,6 +1,6 @@
 import './App.css';
 import Home from './pages/Home';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { Shop } from './pages/Shop';
 import { SingleProduct } from './pages/SingleProduct';
 import { Register } from './pages/Register';
@@ -19,7 +19,7 @@ function App() {
         <Route path='/shop/:category' element={<Shop/>} />
         <Route path='/product/:id' element={<SingleProduct/>}/>
         <Route path='/register' element={<Register/>}/>
-        <Route path='/sign-in' element={<SignIn/>}></Route>
+        <Route path="/sign-in" element={user? <Navigate replace to="/" /> : <SignIn/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/success' element={<Success/>}/>
       </Routes>
