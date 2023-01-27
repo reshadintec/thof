@@ -1,8 +1,16 @@
-import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
 import ProductForm from "..//../components/productForm/ProductForm";
 import "./product.css";
 
 export default function Product() {
+
+  const location = useLocation();
+  const productId = location.pathname.split("/")[2];
+
+  const product = useSelector((state) =>
+    state.product.products.find((product) => product._id === productId)
+  );
   return (
     <div className="product">
       <div className="titleContainer">
@@ -16,49 +24,43 @@ export default function Product() {
         <div className="leftBody">
           <div className="productTitle">
             <img
-              src="https://uz.thehouseoffragrance.com/wp-content/uploads/sites/2/2022/10/Clive-Christian-No.-1-1-600x600.webp"
+              src={product.img}
               alt=""
             />
             <div className="productTitleText">
-              <h3>No 1</h3>
-              <span>Clive Christian</span>
+              <span>{product.title}</span>
             </div>
           </div>
 
           <div className="productAddInfo">
             <h4>Strength:</h4>
-            <span>Eau De Parfum</span>
+            <span>{product.strength}</span>
           </div>
 
           <div className="productAddInfo">
             <h4>Gender:</h4>
-            <span>Women</span>
+            <span>{product.gender}</span>
           </div>
 
           <div className="productAddInfo">
             <h4>Price:</h4>
-            <span>$650</span>
+            <span>{product.price}</span>
           </div>
 
           <div className="productAddInfo">
             <h4>Size:</h4>
-            <span>50 ml</span>
+            <span>{product.size}</span>
           </div>
 
            <div className="productAddInfo">
             <h4>Status:</h4>
-            <span>In stock</span>
+            <span>{product.inStock?"In Stock":"Out of Stock"}</span>
           </div>
 
           <div className="productDesc">
             <h4>Description:</h4>
             <span>
-              No. 1 by Clive Christian is a Amber Floral fragrance for women.
-              No. 1 was launched in 2001. Top notes are Apricot, Peach,
-              Cardamom, Plum, Pineapple, Bergamot, Paprika and Amalfi Lemon;
-              middle notes are Ylang-Ylang, iris, Jasmine, Carnation, Orchid and
-              Rose; base notes are Sandalwood, Vanilla, Benzoin, Tonka Bean,
-              Amber, Musk and Virginia Cedar.
+              {product.desc}
             </span>
           </div>
         </div>

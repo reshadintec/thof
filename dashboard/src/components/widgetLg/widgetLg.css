@@ -45,17 +45,17 @@
   border-radius: 10px;
   border:none;
 }
-.widgetLgButton.Approved{
+.widgetLgButton.approved{
   background-color: lightgreen;
   color:darkgreen
 }
 
-.widgetLgButton.Declined{
+.widgetLgButton.declined{
   background-color: lightcoral;
   color: #250000;
 }
 
-.widgetLgButton.Pending{
+.widgetLgButton.pending{
   background-color: rgb(255, 255, 173);
   color: darkgoldenrod;
 }
