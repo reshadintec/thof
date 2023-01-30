@@ -18,11 +18,11 @@ import Login from "./pages/login/Login";
 import { useSelector } from "react-redux";
 
 function App() {
-  const admin = useSelector((state) => state.user.currentUser.isAdmin);
+  const admin = useSelector((state) => state.user.currentUser?.isAdmin);
   return (
     <Router>
       <Switch>
-        <Route path="/login">
+        <Route exact path="/login">
           <Login />
         </Route>
         {admin && (
@@ -33,27 +33,28 @@ function App() {
               <Route exact path="/">
                 <Home />
               </Route>
-              <Route path="/users">
+              <Route exact path="/users">
                 <UserList />
               </Route>
-              <Route path="/user/:userId">
+              <Route exact path="/user/:userId">
                 <User />
               </Route>
-              <Route path="/newUser">
+              <Route exact path="/newUser">
                 <NewUser />
               </Route>
-              <Route path="/products">
+              <Route exact path="/products">
                 <Products />
               </Route>
-              <Route path="/product/:productId">
+              <Route exact path="/product/:productId">
                 <Product />
               </Route>
-              <Route path="/newproduct">
+              <Route exact path="/newproduct">
                 <ProductNew />
               </Route>
             </div>
           </>
         )}
+        {!admin && <Redirect to="/login" />}
       </Switch>
     </Router>
   );

@@ -50,8 +50,8 @@ export const Products = ({gender,filters, sort, title}) => {
       try{
         const res = await axios.get(
           gender
-          ?`https://thofapi.onrender.com/api/products?gender=${gender}`
-          :"https://thofapi.onrender.com/api/products")
+          ?`http://localhost:5001/api/products?gender=${gender}`
+          :"http://localhost:5001/api/products")
         setProducts(res.data);
       }catch(err){
 

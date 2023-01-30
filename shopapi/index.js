@@ -1,5 +1,5 @@
 const express = require("express");
-const app = express();
+const cors = require("cors");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const userRoute = require("./routes/user");
@@ -8,9 +8,12 @@ const productRoute = require("./routes/product");
 const cartRoute = require("./routes/cart");
 const orderRoute = require("./routes/order");
 const stripeRoute = require("./routes/stripe");
-const cors = require("cors");
 
-dotenv.config();
+require ('dotenv').config();
+const app = express();
+app.use(express.json());
+app.use(cors());
+
 mongoose.set('strictQuery', true);
 mongoose
   .connect( process.env.MONGO_URL)
@@ -19,8 +22,8 @@ mongoose
     {console.log(err)
     });
 
-app.use(cors());
-app.use(express.json());
+
+
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
