@@ -67,7 +67,7 @@ router.get("/", verifyTokenAndAdmin, async (req, res) => {
   }
 });
 
-// GET MONTHLY INCOME
+// order stats
 
 router.get("/income", verifyTokenAndAdmin, async (req, res) => {
   const productId = req.query.productId;

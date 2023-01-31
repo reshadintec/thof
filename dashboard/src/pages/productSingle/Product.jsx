@@ -67,7 +67,7 @@ export default function Product() {
         {/* Right Section */}
         <div className="rightBody">
           <span className="editTitle">Edit</span>
-          <ProductForm title="Click"/>
+          <ProductForm title="Update Product"/>
         </div>
       </div>
       <div className="formContainer">

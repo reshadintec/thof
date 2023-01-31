@@ -11,7 +11,7 @@ import app from "../../firebase";
 import { addProduct } from "../../redux/apiCalls";
 import { useDispatch } from "react-redux";
 
-export default function ProductForm() {
+export default function ProductForm(params) {
   const [inputs, setInputs] = useState({});
   const [file, setFile] = useState(null);
   const dispatch = useDispatch();
@@ -135,7 +135,7 @@ export default function ProductForm() {
           <label >Product Description</label>
           <textarea name="desc" id="" cols="30" rows="10" onChange={handleChange}></textarea>
         </div>
-        <button onClick={handleClick}>Update Product</button>
+        <button onClick={handleClick}>{params.title}</button>
       </form>
     </div>
   )

@@ -22,10 +22,10 @@ export default function UserList() {
       </div>
     )
   } },
-  { field: 'email', headerName: 'Email', width: 150 },
-  { field: 'status', headerName: 'Status', width: 150 },
-  { field: 'transaction', headerName: 'Transaction Volume', width: 150},
-  { field: 'action', headerName: 'Action ', width: 150,
+  { field: 'email', headerName: 'Email',width: 150, minWidth: 80, maxWidth:250 },
+  { field: 'status', headerName: 'Status', width: 150, minWidth: 80, maxWidth:250 },
+  { field: 'transaction', headerName: 'Transaction Volume', width: 150, minWidth: 80, maxWidth:250},
+  { field: 'action', headerName: 'Action ', width: 150, minWidth: 80, maxWidth:250,
     renderCell:(params) =>{
       return(
         <>

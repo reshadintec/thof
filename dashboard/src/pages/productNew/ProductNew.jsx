@@ -3,6 +3,6 @@ import "./productNew.css"
 
 export default function ProductNew() {
   return (
-    <div className="productNew"><ProductForm title="Click"/></div>
+    <div className="productNew"><ProductForm title="Add New"/></div>
   )
 }
